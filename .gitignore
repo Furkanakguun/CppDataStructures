@@ -1,12 +1,28 @@
-CMakeLists.txt.user
+# Build directory
+build/
+
+# Executables
+*.exe
+*.out
+*.app
+CppDataStructures
+
+# Object files
+*.o
+*.obj
+
+# CMake
 CMakeCache.txt
-CMakeFiles
-CMakeScripts
-Testing
-Makefile
+CMakeFiles/
 cmake_install.cmake
-install_manifest.txt
-compile_commands.json
-CTestTestfile.cmake
-_deps
-CMakeUserPresets.json
+Makefile
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store

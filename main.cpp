@@ -3,33 +3,28 @@
 
 int main()
 {
-    DataStructures::Array myArray(5);
+    DataStructures::Array arr(5);
     
-    myArray.set(0, 10);
-    myArray.set(1, 20);
-    myArray.set(2, 30);
-    myArray.set(3, 40);
-    myArray.set(4, 50);
+    arr.set(0, 10);
+    arr.set(1, 20);
+    arr.set(2, 30);
+    arr.set(3, 40);
+    arr.set(4, 50);
     
-    myArray.print();
+    arr.print();
     
     try {
-        int value = myArray.get(10);
+        arr.get(10);
     }
     catch (const std::out_of_range& e) {
         std::cout << "Exception: " << e.what() << std::endl;
     }
     
-    myArray.removeAt(2);
-    myArray.print();
+    arr.removeAt(2);
+    arr.print();
     
-    {
-        DataStructures::Array tempArray(3);
-        tempArray.set(0, 100);
-        tempArray.print();
-    }  // C++: destructor called here automatically (Java: GC handles later)
-    
-
+    DataStructures::Array arr2 = arr;
+    arr2.print();
     
     return 0;
 }
